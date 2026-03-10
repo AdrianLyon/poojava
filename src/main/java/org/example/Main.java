@@ -11,16 +11,6 @@ import java.util.*;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) throws IOException {
-        /*Employee employee = new Employee();
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your name: ");
-        employee.setFullName(scanner.nextLine());
-        System.out.println("Enter your worked hours: ");
-        employee.setHours(scanner.nextDouble());
-        System.out.println("Enter your salary: ");
-        employee.setSalary(scanner.nextDouble());
-        String newLine = employee.getFullName() + ";"+employee.getHours()+";"+employee.getSalary();
-        scanner.close();*/
         Menu menu = new Menu();
         menu.showMenus();
         Path path = Paths.get("data.txt");
@@ -41,3 +31,13 @@ public class Main {
         }
     }
 }
+/*Employee employee = new Employee();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your name: ");
+        employee.setFullName(scanner.nextLine());
+        System.out.println("Enter your worked hours: ");
+        employee.setHours(scanner.nextDouble());
+        System.out.println("Enter your salary: ");
+        employee.setSalary(scanner.nextDouble());
+        String newLine = employee.getFullName() + ";"+employee.getHours()+";"+employee.getSalary();
+        scanner.close();*/
