@@ -22,6 +22,7 @@ public class Menu {
         scanner.close();
     }
     private static void showMenu(){
+        System.out.println("*******menu*******");
         System.out.println("1.- Create employee");
         System.out.println("2.- Read all data");
         System.out.println("3.- exit");
