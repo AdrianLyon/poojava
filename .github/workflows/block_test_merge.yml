@@ -1,0 +1,21 @@
+name: Block Test Branch Merge
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - master
+      - hotfix/*
+
+jobs:
+  check-source-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if source branch is 'test'
+        run: |
+          if [ "${{ github.head_ref }}" == "test" ]; then
+            echo "ERROR: No se permite crear PR desde la rama 'test' hacia ${{ github.base_ref }}"
+            exit 1
+          else
+            echo "OK: La rama de origen es válida."
+          fi
